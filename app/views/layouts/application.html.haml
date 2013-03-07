@@ -9,6 +9,34 @@
 %body.container-fluid
   %div.row-fluid
     %div.span9
+    
+      %div.navbar
+        %div.navbar-inner
+          %a.btn.btn-navbar{'data-target' => '.nav-collapse', 'data-toggle' => 'collapse'}
+            %span.icon-bar
+            %span.icon-bar
+            %span.icon-bar
+          = link_to 'Wandr', '/', class: 'brand'
+          %ul.nav
+            %li.active
+              = link_to 'Home', '#'
+            %li.divider-vertical
+            %li
+              = link_to 'Profile', '#'
+            %li.divider-vertical
+            %li
+              = link_to 'Messages', '#'
+            %li.divider-vertical
+          %div.container.nav-collapse
+      
+      %ul.nav.nav-tabs
+        %li.active
+          = link_to 'Home', '#'
+        %li
+          = link_to 'Profile', '#'
+        %li
+          = link_to 'Messages', '#'
+    
       = yield
   
     = render template: 'layouts/sidebar'
