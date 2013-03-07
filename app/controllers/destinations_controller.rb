@@ -82,7 +82,7 @@ class DestinationsController < ApplicationController
     @destination.destroy
 
     respond_to do |format|
-      format.html { redirect_to destinations_url }
+      format.html { redirect_to @trip }
       format.json { head :no_content }
     end
   end

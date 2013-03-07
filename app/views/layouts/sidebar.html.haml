@@ -1,4 +1,22 @@
 %div#sidebar.span3
+  %div.dropdown
+    %button.btn.dropdown-toggle{'data-toggle' => 'dropdown'} Dropdown <span class="caret"></span>
+    %ul.dropdown-menu{:role => "menu", 'aria-labelledby' => "dropdownMenu"}
+      %li
+        %a(tabindex="-1" href="#") Action
+      %li
+        %a(tabindex="-1" href="#") Another action
+      %li
+        %a(tabindex="-1" href="#") Something else here
+      %li.divider
+      %li.dropdown-submenu
+        %a(tabindex="-1" href="#") More Options
+        %ul.dropdown-menu
+          %li
+            %a(tabindex="-1" href="#") Option1
+          %li
+            %a(tabindex="-1" href="#") Another Option
+          
   %p Link1
   %p Link2
   %p Link3
