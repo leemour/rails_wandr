@@ -7,6 +7,19 @@
   %b Description:
   = @trip.description
 
+%div.dropdown
+  %button.btn.dropdown-toggle{'data-toggle' => 'dropdown'} Dropdown <span class="caret"></span>
+  %ul.dropdown-menu{:role => "menu", 'aria-labelledby' => "dropdownMenu"}
+    %li
+      %a(tabindex="-1" href="#") Action
+    %li
+      %a(tabindex="-1" href="#") Another action
+    %li
+      %a(tabindex="-1" href="#") Something else here
+    %li.divider
+    %li
+      %a(tabindex="-1" href="#") Separated link
+
 %table.table
   %tr
     %th Destination
