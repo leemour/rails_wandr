@@ -1,5 +1,5 @@
 class DestinationsController < ApplicationController
-  before_filter :get_trip
+  before_filter :get_trip, except: :index
   
   def get_trip
     @trip = Trip.find(params[:trip_id])
@@ -50,7 +50,7 @@ class DestinationsController < ApplicationController
 
     respond_to do |format|
       if @destination.save
-        format.html { redirect_to @destination, notice: 'Destination was successfully created.' }
+        format.html { redirect_to trip_destination_path(@trip, @destination), notice: 'Destination was successfully created.' }
         format.json { render json: @destination, status: :created, location: @destination }
       else
         format.html { render action: "new" }

@@ -1,10 +1,9 @@
 RailsWandr::Application.routes.draw do
+  match 'destinations' => 'destinations#index'
+  
   resources :trips do
     resources :destinations
   end
-
-
-  resources :trips
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

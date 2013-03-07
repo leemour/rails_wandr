@@ -1,0 +1,14 @@
+!!!
+%html
+%head
+  %title RailsWandr
+  = stylesheet_link_tag    "application", :media => "all"
+  = javascript_include_tag "application"
+  = csrf_meta_tags
+
+%body.container-fluid
+  %div.row-fluid
+    %div.span9
+      = yield
+  
+    = render template: 'layouts/sidebar'

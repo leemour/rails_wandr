@@ -11,11 +11,17 @@
   %tr
     %th Destination
     %th Description
+    %th Show
+    %th Edit
+    %th Delete
   
   - @trip.destinations.each do |destination|
     %tr
       %td= link_to destination.name, edit_trip_destination_path(@trip, destination)
       %td= destination.description
+      %td= link_to 'Show', trip_destination_path(@trip,destination)
+      %td= link_to 'Edit', edit_trip_destination_path(@trip,destination)
+      %td= link_to 'Destroy', trip_destination_path(@trip,destination), :method => :delete, :data => { :confirm => 'Are you sure?' }
 
 %P
   = link_to "New Destination", new_trip_destination_path(@trip)
