@@ -2,6 +2,6 @@
 
 = render 'form'
 
-= link_to 'Show', @destination
+= link_to 'Show', trip_destination_path(@trip, @destination)
 \|
-= link_to 'Back', destinations_path
+= link_to 'Back', trip_destinations_path(@trip)

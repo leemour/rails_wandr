@@ -1,6 +1,6 @@
 %h1 Listing destinations
 
-%table
+%table.table
   %tr
     %th Name
     %th Description
@@ -12,10 +12,11 @@
     %tr
       %td= destination.name
       %td= destination.description
-      %td= link_to 'Show', destination
-      %td= link_to 'Edit', edit_destination_path(destination)
-      %td= link_to 'Destroy', destination, :method => :delete, :data => { :confirm => 'Are you sure?' }
+      %td= link_to 'Show', trip_destination_path(@trip,destination)
+      %td= link_to 'Edit', edit_trip_destination_path(@trip,destination)
+      %td= link_to 'Destroy', trip_destination_path(@trip,destination), :method => :delete, :data => { :confirm => 'Are you sure?' }
 
 %br
 
-= link_to 'New Destination', new_destination_path
+= link_to 'New Destination', new_trip_destination_path(@trip)
+= link_to 'Back to trip', @trip
