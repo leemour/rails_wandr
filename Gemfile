@@ -40,6 +40,7 @@ group :assets do
   gem 'compass'
   gem "therubyracer", :platform => :ruby
   gem 'uglifier', '>= 1.0.3'
+  gem 'redcarpet'
 end
 
 # To use ActiveModel has_secure_password
